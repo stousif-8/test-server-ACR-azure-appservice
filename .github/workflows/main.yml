@@ -1,4 +1,4 @@
-name: Build and Deploy to Azure App Service from ACR
+name: Build and Deploy Docker Image to Azure App Service
 
 on:
   push:
