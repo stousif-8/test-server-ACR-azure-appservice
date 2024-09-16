@@ -28,8 +28,14 @@ jobs:
   deploy:
     runs-on: ubuntu-latest
     needs: build
-
+    
     steps:
+     # Azure Login action
+    - name: Login to Azure
+      uses: azure/login@v1
+      with:
+        creds: ${{ secrets.AZURE_CREDENTIALS }}
+
     - name: 'Deploy to Azure App Service from ACR'
       uses: azure/webapps-deploy@v2
       with:
