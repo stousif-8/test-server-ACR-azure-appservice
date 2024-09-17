@@ -30,7 +30,7 @@ jobs:
     needs: build
     
     steps:
-     # Azure Login action
+     # This will login to Azure
     - name: Login to Azure
       uses: azure/login@v1
       with:
